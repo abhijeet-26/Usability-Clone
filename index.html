@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="media-queries.css">
   </head>
   <body>
     <!-- Top banner -->
@@ -27,39 +28,18 @@
           <img src="./assets/asset 1.png" alt="Company Logo" />
         </a>
 
-        <div class="nav-links">
+        <div class="nav-links" id="nav-link">
           <ul class="flex">
             <li>
-              <div class="dropdown">
-                <a class="dropbtn">
-                  Product
-                  <i class="fa fa-angle-down"></i>
-                </a>
-                <div class="dropdown-content">
-                  <a href="#">Overview</a>
-                  <a href="#">Card sorting</a>
-                  <a href="#">Prototype testing</a>
-                  <a href="#">Design survey</a>
-                  <a href="#">Fve second tests</a>
-                  <a href="#">Preference tests</a>
-                  <a href="#">First click tests</a>
-                  <a href="#">Panel</a>
-                </div>
-              </div>
+             <a href="#" class="hover-links">Products</a>
             </li>
             <li><a href="#" class="hover-links">Customers</a></li>
             <li><a href="#" class="hover-links">Pricing</a></li>
             <li>
               <div class="dropdown">
-                <a href="#" class="dropbtn"
-                  >Resources <i class="fa fa-angle-down"></i
-                ></a>
-                <div class="dropdown-content">
-                  <a href="#">Examples</a>
-                  <a href="#">Testing guides</a>
-                  <a href="#">Help center</a>
-                  <a href="#">Blog</a>
-                </div>
+                <a href="#" class="hover-links"
+                  >Resources </a>
+               
               </div>
             </li>
             <li>
@@ -67,7 +47,11 @@
             </li>
             <li><a href="#" class="hover-links primary-button">Sign up</a></li>
           </ul>
+
         </div>
+        <a href="#" class="nav-toggle hover-links" id="nav-toggle">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </nav>
 
@@ -408,5 +392,17 @@
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const toggleButton = document.getElementById('nav-toggle');
+      const navLinks = document.getElementById('nav-link');
+      toggleButton.addEventListener('click', ()=>{
+        navLinks.classList.toggle('active');
+      })
+
+     
+
+    </script>
+
   </body>
 </html>
